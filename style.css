@@ -1,0 +1,468 @@
+/* clean default setting  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #17181a;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* #logo {
+  color: white;
+  font-family: "Abril Fatface", sans-serif;
+} */
+
+.nav-header img {
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: cover;
+  margin-right: 1.5rem;
+}
+
+.nav-header {
+  min-height: 10vh;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  width: 100%;
+  margin: auto;
+  padding: 1rem 8rem;
+  z-index: 2;
+  /* position: relative; */
+  position: fixed;
+  top: 0; /* Position at the top of the viewport */
+  left: 0; /* Position at the left of the viewport */
+  right: 0; /* Position at the right of the viewport */
+  background-color: #17181a;
+  opacity: 1;
+}
+
+.nav-header-logo-name {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav-header-logo-name h1:hover {
+  opacity: 0.5;
+}
+
+.nav-header-logo-name h2 {
+  pointer-events: none;
+}
+
+.line1,
+.line2 {
+  background: white;
+  width: 2rem;
+  margin: 0.4rem;
+  height: 0.2rem;
+  pointer-events: none;
+}
+
+.slide {
+  min-height: 100vh;
+  margin: 0 auto 0 auto;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  /* background: #57895e; */
+}
+
+.hero-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  /* flex-basis has a higher priority than width or height (if set). 
+We usually set flex-basis to the minimum length we find acceptable 
+for an element. If we set it to 100% and at the same time have 
+flex-wrap set to wrap , we can force individual elements to take 
+up an entire line creating neat stacks of elements. */
+  flex-basis: 25rem;
+  padding-left: 5rem;
+  /* We need to "Position: relative", So we can put another element 
+  div on top of it as "Position: absolute" */
+  position: relative;
+}
+
+.hero-img {
+  position: relative;
+  /* If an element has flex: 1, it signifies that the width of all other 
+elements will be the same as their content, 
+but the element with flex: 1 will be given the remaining full space. */
+  flex: 1;
+  flex-basis: 25rem;
+  /* This below will hide the overflow image */
+  overflow: hidden;
+}
+
+.hero-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.fashion-span {
+  color: rgb(255, 139, 93);
+}
+
+.mountain-span {
+  color: rgb(86, 124, 228);
+}
+
+.hike-span {
+  color: rgb(167, 110, 231);
+}
+
+.hero-desc h2 {
+  font-family: "Abril Fatface", sans-serif;
+  font-size: 3.5rem;
+  pointer-events: none;
+}
+
+.hero-desc p {
+  padding: 3rem 0rem;
+  font-size: 1.5rem;
+  color: rgb(223, 223, 223);
+  pointer-events: none;
+}
+
+.hero-desc li {
+  font-size: 1.2rem;
+  pointer-events: none;
+}
+
+.explore {
+  padding: 1rem 2rem;
+  background-color: rgba(199, 178, 178, 0.3);
+  border-radius: 10px;
+  color: white;
+  border: 1px solid white;
+  font-size: 1rem;
+  text-decoration: none;
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+.nav-bar {
+  position: fixed;
+  padding-left: 2rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 1;
+  opacity: 1;
+  clip-path: circle(50px at 100% -10%);
+  /* below webkit will make compatible with other browsers */
+  -webkit-clip-path: circle(50px at 100% -10%);
+}
+
+.burger {
+  cursor: pointer;
+}
+
+.nav-links {
+  font-size: 4rem;
+  flex-basis: 30rem;
+}
+
+.nav-links h3 {
+  font-size: 2.5rem;
+  padding: 3rem 0rem;
+  cursor: pointer;
+}
+
+h3 a {
+  color: black;
+}
+
+h3 a:hover {
+  color: lightblue;
+  opacity: 0.75;
+}
+
+.contact {
+  flex-basis: 30rem;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  padding: 2rem 0rem;
+}
+
+.contact p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.reveal-img,
+.reveal-text {
+  /* Here position is absolute, So this div can stay on top of it */
+  position: absolute;
+  width: 100%;
+  /* To fix the scroll magic flickering issue we updated the height: 150% from 100%*/
+  height: 150%;
+  background: #17181a;
+  left: 0;
+  /* To fix the scroll magic flickering issue we updated the top: -15% from 0*/
+  top: -15%;
+}
+
+/* .cursor {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+} */
+
+.title {
+  background: #17181a;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.title-swipe {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* Overlapping content uses position: absolute */
+  position: absolute;
+  mix-blend-mode: darken;
+  transform: translateY(100%);
+  /* transition: height 0.3s ease; */
+}
+
+.t-swipe1 {
+  background: rgb(86, 124, 228);
+}
+
+.t-swipe2 {
+  background: rgb(167, 110, 231);
+}
+
+.t-swipe3 {
+  background: rgb(255, 139, 93);
+}
+
+/* As the below class is covering the other content, fix it as below */
+.scrollmagic-pin-spacer {
+  position: static !important;
+}
+
+.hide {
+  overflow: hidden;
+}
+
+.gallery-list a {
+  text-decoration: underline;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+a:hover {
+  color: lightblue;
+  opacity: 0.75;
+}
+
+/* Other pages -----------------------------------------------------------------------------*/
+.fashion1,
+.fashion2,
+.fashion3 {
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 80%;
+  color: white;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.fashion-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.fashion-img {
+  height: 80vh;
+  flex-basis: 50rem;
+}
+
+.fashion-text {
+  flex: 1;
+  flex-basis: 30rem;
+  position: relative;
+}
+
+.fashion-text a {
+  pointer-events: visible;
+  cursor: pointer;
+  color: white;
+}
+
+.fashion-text a:hover {
+  color: rgb(255, 139, 93);
+  opacity: 0.75;
+}
+
+.fashion-text h1 {
+  font-size: 5rem;
+  padding: 5rem 3rem;
+  pointer-events: none;
+  pointer-events: none;
+  font-family: "Abril Fatface", sans-serif;
+}
+
+.fashion1 h1 {
+  color: rgb(86, 124, 228);
+}
+
+.fashion2 h1 {
+  color: rgb(167, 110, 231);
+}
+
+.fashion3 h1 {
+  color: rgb(255, 139, 93);
+}
+
+.fashion-text p {
+  font-size: 2rem;
+  padding: 0rem 2rem 2rem 3rem;
+  margin-bottom: 5rem;
+  pointer-events: none;
+}
+
+/* .fashion-nr {
+  font-size: 3rem;
+  position: absolute;
+  left: 55%;
+  bottom: 26.5%;
+  opacity: 0.75;
+} */
+
+/* This is another page for Gallery */
+.gallery-page {
+  background: rgba(51, 51, 52, 0.949);
+  /* background: none; */
+  width: 100%;
+  height: 100%;
+  padding-top: 10rem;
+}
+
+.gallery-section {
+  min-height: 100vh;
+  width: 80%;
+  margin: auto;
+  font-size: 2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+.search-bar h2 {
+  pointer-events: none;
+  padding: 2rem;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-bar form {
+  display: flex;
+}
+
+.search-bar input {
+  /* width: 100%; */
+  padding: 0.5rem 2rem;
+  border: none;
+  font-size: 1rem;
+}
+
+.search-bar button {
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  background: lightblue;
+}
+
+.more {
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.nav-button {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+.gallery-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem 0rem;
+}
+
+.gallery-info a {
+  text-decoration: none;
+  color: white;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  padding: 2rem 0rem;
+  row-gap: 5rem;
+  column-gap: 3rem;
+}
+
+.gallery-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.warningMessage {
+  color: yellow;
+  font-size: 1.5rem;
+  margin: 2rem;
+  text-decoration: none;
+}
